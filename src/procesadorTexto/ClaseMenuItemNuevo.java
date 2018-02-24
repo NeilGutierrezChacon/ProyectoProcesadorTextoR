@@ -5,10 +5,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JTextArea;
 
 public class ClaseMenuItemNuevo implements ActionListener {
 
-	public ClaseMenuItemNuevo(JMenu menu) {
+	public ClaseMenuItemNuevo(JMenu menu, JTextArea hoja) {
 		
 		JMenuItem nuevo = new JMenuItem("Nuevo");
 		
@@ -17,6 +18,12 @@ public class ClaseMenuItemNuevo implements ActionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+				
+				if(!(hoja.getText().equals(""))) {
+					System.out.println("Desea guardar los cambios.....");
+					hoja.setText("");
+				}
+				
 				
 			}});
 		

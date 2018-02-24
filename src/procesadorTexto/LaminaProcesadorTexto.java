@@ -12,7 +12,7 @@ import javax.swing.JTextArea;
 
 public class LaminaProcesadorTexto extends JPanel {
 	
-	private JTextArea hoja;//Veriable usada para escribir como hoja
+	public JTextArea hoja;//Veriable usada para escribir como hoja
 	//usada en el solo en la clase LaminaProcesador de texto 
 	private JMenu archivo,edicion,formato,ver,ayuda;
 	
@@ -51,7 +51,7 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		//--------------------------------------------------------------------------//
 		
-		ClaseMenuItemNuevo nuevo=new ClaseMenuItemNuevo(archivo);
+		ClaseMenuItemNuevo nuevo=new ClaseMenuItemNuevo(archivo,hoja);
 		
 		ClaseMenuItemAbrir abrir=new ClaseMenuItemAbrir(archivo);
 		
