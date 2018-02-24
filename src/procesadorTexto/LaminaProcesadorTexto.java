@@ -14,6 +14,7 @@ public class LaminaProcesadorTexto extends JPanel {
 	
 	private JTextArea hoja;//Veriable usada para escribir como hoja
 	//usada en el solo en la clase LaminaProcesador de texto 
+	private JMenu archivo,edicion,formato,ver,ayuda;
 	
 	
 	public LaminaProcesadorTexto() {
@@ -28,15 +29,15 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		add(hoja,BorderLayout.CENTER);//añadiendo la hoja en la parte norte
 		//--------------------------------------------------------------------------//
-		JMenu archivo =new JMenu("Archivo");
+		archivo =new JMenu("Archivo");
 		
-		JMenu edicion =new JMenu("Edicion");
+		edicion =new JMenu("Edicion");
 		
-		JMenu formato =new JMenu("Formato");
+		formato =new JMenu("Formato");
 		
-		JMenu ver =new JMenu("Ver");
+		ver =new JMenu("Ver");
 		
-		JMenu ayuda =new JMenu("Ayuda");
+		ayuda =new JMenu("Ayuda");
 		
 		barraPrincipal.add(archivo);
 		
@@ -48,6 +49,58 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		barraPrincipal.add(ayuda);
 		
+		//--------------------------------------------------------------------------//
+		
+		ClaseMenuItemNuevo nuevo=new ClaseMenuItemNuevo(archivo);
+		
+		ClaseMenuItemAbrir abrir=new ClaseMenuItemAbrir(archivo);
+		
+		ClaseMenuItemGuardar guardar=new ClaseMenuItemGuardar(archivo);
+		
+		ClaseMenuItemGuardarComo guardarComo=new ClaseMenuItemGuardarComo(archivo);
+		
+		ClaseMenuItemConfigurarPag confPag=new ClaseMenuItemConfigurarPag(archivo);
+		
+		ClaseMenuItemImprimir imprimir=new ClaseMenuItemImprimir(archivo);
+		
+		ClaseMenuItemSalir salir=new ClaseMenuItemSalir(archivo);
+		
+		
+		//-------------------------------------------------------------------------------//
+		
+		ClaseMenuItemSalir deshacer=new ClaseMenuItemSalir(edicion);
+		
+		ClaseMenuItemCortar cortar=new ClaseMenuItemCortar(edicion);
+		
+		ClaseMenuItemCopiar copiar=new ClaseMenuItemCopiar(edicion);
+		
+		ClaseMenuItemPegar pegar=new ClaseMenuItemPegar(edicion);
+		
+		ClaseMenuItemBuscar buscar=new ClaseMenuItemBuscar(edicion);
+		
+		ClaseMenuItemBuscarSiguiente buscarSiguiente=new ClaseMenuItemBuscarSiguiente(edicion);
+		
+		ClaseMenuItemReemplazar remplazar=new ClaseMenuItemReemplazar(edicion);
+		
+		ClaseMenuItemIrA irA=new ClaseMenuItemIrA(edicion);
+		
+		ClaseMenuItemSeleccionarTodo seleccionarTodo=new ClaseMenuItemSeleccionarTodo(edicion);
+		
+		ClaseMenuItemHoraYFecha horaYFecha=new ClaseMenuItemHoraYFecha(edicion);
+		
+		//---------------------------------------------------------------------------------//
+		
+		ClaseMenuItemAjusteDeLinea ajusteDeLinea=new ClaseMenuItemAjusteDeLinea(formato);
+		
+		ClaseMenuItemFuente fuente=new ClaseMenuItemFuente(edicion);
+		
+		//--------------------------------------------------------------------------------//
+		
+		ClaseMenuItemBarraDeEstado barraDeEstado=new ClaseMenuItemBarraDeEstado(ver);
+		
+		//---------------------------------------------------------------------------------//
+		
+		ClaseMenuItemVerLaAyuda verLaAyuda=new ClaseMenuItemVerLaAyuda(ayuda);
 		
 		
 		
