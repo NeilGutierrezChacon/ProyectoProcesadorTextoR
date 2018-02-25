@@ -2,6 +2,7 @@ package procesadorTexto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -21,6 +22,18 @@ public class ClaseMenuItemNuevo implements ActionListener {
 				
 				if(!(hoja.getText().equals(""))) {
 					System.out.println("Desea guardar los cambios.....");
+					Scanner teclado =new Scanner(System.in);
+					String accion=teclado.toString();
+					switch(accion) {
+					case "y":
+						
+						
+						break;
+					case "n":
+						break;
+						
+						
+					}
 					hoja.setText("");
 				}
 				

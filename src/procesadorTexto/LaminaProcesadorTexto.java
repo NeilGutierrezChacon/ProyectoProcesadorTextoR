@@ -55,7 +55,7 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		ClaseMenuItemAbrir abrir=new ClaseMenuItemAbrir(archivo);
 		
-		ClaseMenuItemGuardar guardar=new ClaseMenuItemGuardar(archivo);
+		ClaseMenuItemGuardar guardar=new ClaseMenuItemGuardar(archivo,hoja,"testGuardado.txt");
 		
 		ClaseMenuItemGuardarComo guardarComo=new ClaseMenuItemGuardarComo(archivo);
 		
