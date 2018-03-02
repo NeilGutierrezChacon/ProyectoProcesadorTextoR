@@ -3,12 +3,13 @@ package procesadorTexto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JComponent;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
 public class ClaseMenuItemDeshacer {
 
-	public ClaseMenuItemDeshacer(JMenu menu) {
+	public ClaseMenuItemDeshacer(JComponent menu) {
 		
 		JMenuItem deshacer = new JMenuItem("Deshacer");
 		

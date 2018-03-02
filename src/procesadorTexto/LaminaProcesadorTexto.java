@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 
 /*
@@ -24,6 +25,8 @@ public class LaminaProcesadorTexto extends JPanel {
 		JPanel laminaMenuPrincipal = new JPanel();//Lamina donde estableceremos el menu
 		
 		JMenuBar barraPrincipal=new JMenuBar();//instancia un menuBarra para el menu principal
+		
+		JPopupMenu menuEmergente =new JPopupMenu();
 		
 		hoja=new JTextArea();//instancia de la variable hoja como JTextArea
 		
@@ -68,13 +71,15 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		//-------------------------------------------------------------------------------//
 		
-		ClaseMenuItemSalir deshacer=new ClaseMenuItemSalir(edicion);
+		ClaseMenuItemDeshacer deshacer=new ClaseMenuItemDeshacer(edicion);
 		
 		ClaseMenuItemCortar cortar=new ClaseMenuItemCortar(edicion);
 		
 		ClaseMenuItemCopiar copiar=new ClaseMenuItemCopiar(edicion);
 		
 		ClaseMenuItemPegar pegar=new ClaseMenuItemPegar(edicion);
+		
+		ClaseMenuItemEliminar eliminar =new ClaseMenuItemEliminar(edicion);
 		
 		ClaseMenuItemBuscar buscar=new ClaseMenuItemBuscar(edicion);
 		
@@ -102,8 +107,22 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		ClaseMenuItemVerLaAyuda verLaAyuda=new ClaseMenuItemVerLaAyuda(ayuda);
 		
+		//--------------------------------------------------------------------------------//
+		/*
+		 * Items del menu emergente del click derecho
+		 */
 		
+		ClaseMenuItemCortar cortarE=new ClaseMenuItemCortar(menuEmergente);
 		
+		ClaseMenuItemCopiar copiarE=new ClaseMenuItemCopiar(menuEmergente);
+		
+		ClaseMenuItemPegar pegarE=new ClaseMenuItemPegar(menuEmergente);
+		
+		ClaseMenuItemEliminar eliminarE =new ClaseMenuItemEliminar(menuEmergente);
+		
+		ClaseMenuItemDeshacer DeshacerE = new ClaseMenuItemDeshacer(menuEmergente);
+		
+		hoja.setComponentPopupMenu(menuEmergente);
 		
 		laminaMenuPrincipal.add(barraPrincipal);//añadimos la barra principal a la lamina
 		//del menu principal NECESARIO AÑADIRLOS AL FINAL 

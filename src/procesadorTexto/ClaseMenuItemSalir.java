@@ -18,6 +18,8 @@ public class ClaseMenuItemSalir {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Esta saliendo del bloc de notas");
 				
+				System.exit(0);
+				
 			}});
 		
 		menu.add(salir);
