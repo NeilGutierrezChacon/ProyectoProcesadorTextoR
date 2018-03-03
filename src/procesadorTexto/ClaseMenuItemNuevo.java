@@ -9,6 +9,7 @@ import java.util.Scanner;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 import javax.swing.JOptionPane;
 
 public class ClaseMenuItemNuevo implements ActionListener {

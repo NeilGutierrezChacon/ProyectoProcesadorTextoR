@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 
 public class ClaseMenuItemGuardar {
 

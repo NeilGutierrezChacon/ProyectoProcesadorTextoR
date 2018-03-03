@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 
 public class EventoGuardar implements ActionListener{
 

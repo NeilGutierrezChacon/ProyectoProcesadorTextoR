@@ -5,7 +5,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 
 /*
  * Lamina donde desarrollamos el procesador de texto
@@ -24,13 +26,16 @@ public class LaminaProcesadorTexto extends JPanel {
 		
 		JPanel laminaMenuPrincipal = new JPanel();//Lamina donde estableceremos el menu
 		
+		
 		JMenuBar barraPrincipal=new JMenuBar();//instancia un menuBarra para el menu principal
 		
 		JPopupMenu menuEmergente =new JPopupMenu();
 		
-		hoja=new JTextArea();//instancia de la variable hoja como JTextArea
+		hoja=new JTextArea(8,20);//instancia de la variable hoja como JTextArea
+		
 		
 		add(hoja,BorderLayout.CENTER);//añadiendo la hoja en la parte norte
+		
 		//--------------------------------------------------------------------------//
 		archivo =new JMenu("Archivo");
 		
